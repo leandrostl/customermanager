@@ -12,14 +12,15 @@ import java.util.Optional;
 @RequiredArgsConstructor
 public class CustomerAdapter implements GetCustomerPort {
     private final CustomerRepository customerRepository;
+    private final CustomerMapper customerMapper;
 
     @Override
     public Optional<Customer> findCustomer(Document document) {
-        return customerRepository.findByDocument(document.code()).map(CustomerJpaEntity::toDomainModel);
+        return customerRepository.findByDocument(document.code()).map(customerMapper::toDomainModel);
     }
 
     @Override
     public Optional<Customer> findCustomer(Customer.CustomerId id) {
-        return customerRepository.findById(id.value()).map(CustomerJpaEntity::toDomainModel);
+        return customerRepository.findById(id.value()).map(customerMapper::toDomainModel);
     }
 }
