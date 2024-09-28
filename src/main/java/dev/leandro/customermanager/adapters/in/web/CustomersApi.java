@@ -5,6 +5,7 @@ import dev.leandro.customermanager.adapters.in.web.dto.CustomerResponse;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
 import io.swagger.v3.oas.annotations.enums.ParameterIn;
+import io.swagger.v3.oas.annotations.headers.Header;
 import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
@@ -22,8 +23,9 @@ public interface CustomersApi {
             description = "Register a new bank customer", tags = {"customer"})
     @ApiResponses(value = {
             @ApiResponse(responseCode = "201", description = "Customer registered successfully",
-                    content = @Content(mediaType = "application/json",
-                            schema = @Schema(implementation = CustomerResponse.class)))})
+                    headers = @Header(name = "Location", description = "URL to get the created customer",
+                            schema = @Schema(type = "string", format = "uri")),
+                    content = @Content(schema = @Schema()))})
     ResponseEntity<CustomerResponse> createCustomer(
             UriComponentsBuilder uriComponentsBuilder,
             @Parameter(in = ParameterIn.DEFAULT, description = "Customer information", required = true, schema = @Schema())
@@ -36,7 +38,8 @@ public interface CustomersApi {
             @ApiResponse(responseCode = "200", description = "Customer found for filter parameters",
                     content = @Content(mediaType = "application/json",
                             schema = @Schema(implementation = CustomerResponse.class))),
-            @ApiResponse(responseCode = "404", description = "No customer found for filter parameters")})
+            @ApiResponse(responseCode = "404", description = "No customer found for filter parameters",
+                    content = @Content(schema = @Schema()))})
     ResponseEntity<CustomerResponse> findCustomer(
             @Parameter(in = ParameterIn.QUERY, description = "Customer identification on the system", schema = @Schema())
             @Valid Long id,
