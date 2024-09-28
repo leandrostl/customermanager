@@ -7,12 +7,17 @@ import org.mapstruct.factory.Mappers;
 
 
 @Mapper(componentModel = "spring")
-public interface CustomerMapper {
+public interface CustomerJpaDomainMapper {
 
-    CustomerMapper INSTANCE = Mappers.getMapper(CustomerMapper.class);
+    CustomerJpaDomainMapper INSTANCE = Mappers.getMapper(CustomerJpaDomainMapper.class);
 
     @Mapping(source = "id", target = "id.value")
     @Mapping(source = "document", target = "document.code")
     @Mapping(source = "documentType", target = "document.type")
     Customer toDomainModel(CustomerJpaEntity entity);
+
+    @Mapping(target = "id", ignore = true)
+    @Mapping(source = "document.code", target = "document")
+    @Mapping(source = "document.type", target = "documentType")
+    CustomerJpaEntity toJpaEntity(Customer entity);
 }

@@ -6,6 +6,6 @@ import dev.leandro.customermanager.application.domain.model.Document;
 import java.util.Optional;
 
 public interface GetCustomerPort {
-    Optional<Customer> findCustomer(Document document);
-    Optional<Customer> findCustomer(Customer.CustomerId id);
+    Optional<Customer> find(Document document);
+    Optional<Customer> find(Customer.CustomerId id);
 }

@@ -11,6 +11,7 @@ import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
+import org.springframework.web.util.UriComponentsBuilder;
 
 import javax.validation.Valid;
 
@@ -24,6 +25,7 @@ public interface CustomersApi {
                     content = @Content(mediaType = "application/json",
                             schema = @Schema(implementation = CustomerResponse.class)))})
     ResponseEntity<CustomerResponse> createCustomer(
+            UriComponentsBuilder uriComponentsBuilder,
             @Parameter(in = ParameterIn.DEFAULT, description = "Customer information", required = true, schema = @Schema())
             @Valid CustomerRequest body);
 

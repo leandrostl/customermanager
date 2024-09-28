@@ -5,9 +5,9 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertAll;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-class CustomerMapperTest {
+class CustomerJpaDomainMapperTest {
 
-    private final CustomerMapper mapper = CustomerMapper.INSTANCE;
+    private final CustomerJpaDomainMapper mapper = CustomerJpaDomainMapper.INSTANCE;
 
     @Test
     void whenCustomerIsFulfilledShouldConvert() {
