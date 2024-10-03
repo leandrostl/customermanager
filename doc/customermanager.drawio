@@ -1,0 +1,31 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.7.8 Chrome/128.0.6613.36 Electron/32.0.1 Safari/537.36" version="24.7.8">
+  <diagram name="Página-1" id="guVtb4wPHKxPRjbmg8W0">
+    <mxGraphModel dx="928" dy="664" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="DLNx8veQ-eWzQ5CRuT4L-3" value="MyBank" style="swimlane;whiteSpace=wrap;html=1;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;strokeColor=#FF6392;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;fontColor=#5AA9E6;fillColor=#FFE45E;labelBackgroundColor=none;" vertex="1" parent="1">
+          <mxGeometry x="310" y="400" width="310" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="DLNx8veQ-eWzQ5CRuT4L-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#FF6392;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;fontColor=#5AA9E6;fillColor=#FFE45E;startArrow=classic;startFill=1;" edge="1" parent="DLNx8veQ-eWzQ5CRuT4L-3" source="DLNx8veQ-eWzQ5CRuT4L-1" target="DLNx8veQ-eWzQ5CRuT4L-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="DLNx8veQ-eWzQ5CRuT4L-1" value="Customer Manager" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;fillColor=#FFE45E;fontColor=#5AA9E6;strokeColor=#FF6392;labelBackgroundColor=none;" vertex="1" parent="DLNx8veQ-eWzQ5CRuT4L-3">
+          <mxGeometry x="50" y="65" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="DLNx8veQ-eWzQ5CRuT4L-8" value="Customer&lt;div&gt;Database&lt;/div&gt;" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;strokeColor=#006EAF;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;fontColor=#000000;fillColor=#1ba1e2;labelBackgroundColor=none;" vertex="1" parent="DLNx8veQ-eWzQ5CRuT4L-3">
+          <mxGeometry x="226" y="55" width="60" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="DLNx8veQ-eWzQ5CRuT4L-11" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;Endpoints customers:&lt;/h1&gt;&lt;p&gt;post /customers &lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;-&amp;gt; 201, 400, 5xx&lt;/p&gt;&lt;p&gt;put /customers/&amp;lt;id&amp;gt; -&amp;gt; 200, 404, 400, 5xx&lt;/p&gt;&lt;p&gt;get /customers?id=&amp;lt;id&amp;gt;&amp;amp;document=&amp;lt;document&amp;gt;&lt;/p&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;sketch=1;curveFitting=1;jiggle=2;fillColor=#cce5ff;strokeColor=#36393d;" vertex="1" parent="1">
+          <mxGeometry x="30" y="510" width="270" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="TQWt252PJBJvMtsvETRX-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=#FF6392;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;fontColor=#5AA9E6;fillColor=#FFE45E;startArrow=classic;startFill=1;" edge="1" parent="1" source="TQWt252PJBJvMtsvETRX-2" target="DLNx8veQ-eWzQ5CRuT4L-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="TQWt252PJBJvMtsvETRX-2" value="" style="points=[[0.35,0,0],[0.98,0.51,0],[1,0.71,0],[0.67,1,0],[0,0.795,0],[0,0.65,0]];verticalLabelPosition=bottom;html=1;verticalAlign=top;aspect=fixed;align=center;pointerEvents=1;shape=mxgraph.cisco19.user;fillColor=#005073;strokeColor=none;hachureGap=4;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;fontColor=#5AA9E6;" vertex="1" parent="1">
+          <mxGeometry x="190" y="444" width="50" height="50" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

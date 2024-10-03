@@ -1,0 +1,14 @@
+plugins {
+    id 'org.springframework.boot' version '3.3.4'
+    id 'io.spring.dependency-management' version '1.1.6'
+}
+
+description = "Wires the application together."
+
+dependencies {
+    implementation project(path: ':application:core')
+    implementation project(path: ':application:dataprovider')
+    implementation project(path: ':application:entrypoint')
+
+    implementation 'org.springframework.boot:spring-boot-starter'
+}
