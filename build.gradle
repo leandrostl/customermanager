@@ -1,35 +1,40 @@
+plugins {
+    alias libs.plugins.spring.boot apply false
+    alias libs.plugins.spring.dependency.management apply false
+}
+
 description = "Customer manager: A MyBank customer manager"
 
 allprojects {
     group = 'dev.leandro'
     version = '0.0.1-SNAPSHOT'
-}
 
-subprojects {
+    apply plugin: 'java'
+    apply plugin: 'org.springframework.boot'
+    apply plugin: 'io.spring.dependency-management'
+
     repositories {
         mavenCentral()
     }
-
-    ext {
-        springboot_version = "3.3.4"
-    }
-}
-
-configure(allprojects - project(":application")) {
-    apply plugin: 'java'
 
     java {
         toolchain {
             languageVersion = JavaLanguageVersion.of(17)
         }
     }
+
     test {
         useJUnitPlatform()
     }
-    configurations {
-        compileOnly {
-            extendsFrom annotationProcessor
-        }
+}
+
+configure(allprojects - project(':application')) {
+    bootJar.enabled = false
+    jar.enabled = true
+
+    dependencies {
+        compileOnly libs.lombok
+        annotationProcessor libs.lombok
     }
 }
 

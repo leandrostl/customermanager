@@ -1,7 +1,6 @@
 rootProject.name = 'customermanager'
-
-include "application:core"
-include "application:dataprovider"
-include "application:entrypoint"
-include "application:configuration"
+include ":application"
+include ":application:core"
+include ":application:dataprovider"
+include ":application:entrypoint"
 
