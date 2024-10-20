@@ -1,4 +1,4 @@
-rootProject.name = 'customermanager'
+rootProject.name = 'customer_manager'
 include ":application"
 include ":application:core"
 include ":application:dataprovider"

@@ -30,7 +30,7 @@ spec:
             - containerPort: 5432
           env:
             - name: POSTGRES_DB
-              value: customermanager
+              value: customer_manager
             - name: POSTGRES_USER
               value: leandro
             - name: POSTGRES_PASSWORD
