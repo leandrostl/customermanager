@@ -5,6 +5,7 @@ dependencies {
     implementation libs.spring.boot.starter.web
     implementation libs.spring.boot.starter.validation
     implementation libs.swagger.annotations
+    implementation libs.springdoc.openapi
     implementation libs.bundles.object.mapping
     annotationProcessor libs.mapstruct.processor
 }
